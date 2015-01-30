@@ -4,7 +4,7 @@ class RpgController < ApplicationController
         session[:activity_list] ||= []
         if @gamble_amount.present?
             session[:current_score] += @gamble_amount;
-        else session[:current_score]
+        else session[:current_score] = 0
         end
     end
 

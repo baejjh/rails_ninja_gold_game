@@ -4,8 +4,6 @@
 	<p>Your Gold: <%= session[:current_score] %></p>
 </div>
 
-<%= session[:random] %>
-
 <div id="gamble_div">
 	<div class="gamble_option">
 		<h3>Farm</h3>
@@ -32,7 +30,8 @@
 <div id="activity_div">
 <h4>Activities:</h4>
 	<div class="activity_list">
-		<p class="winning">Earned XX golds from the farm! (current_date_time)</p>
-		<p class="losing">Entered the casino and lost XX golds.. Ouch.. (current_date_time)</p>
+		<% if session[:activity_msg] %>
+		<%= session[:activity_msg].html_safe %>
+	<% end %>
 	</div>
 </div>

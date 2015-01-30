@@ -2,6 +2,7 @@
 
 <div id="score_div">
 	<p>Your Gold: <%= session[:current_score] %></p>
+	<a href="/rpg/replay/">Start Over!</a>
 </div>
 
 <div id="gamble_div">
@@ -30,8 +31,13 @@
 <div id="activity_div">
 <h4>Activities:</h4>
 	<div class="activity_list">
-		<% if session[:activity_msg] %>
+	<% if session[:activity_msg] %>
 		<%= session[:activity_msg].html_safe %>
+	<% end %>
+	<% if session[:activity_list] %>
+		<% session[:activity_list].each do |index|%>
+			<%= index.html_safe %>
+		<% end %>
 	<% end %>
 	</div>
 </div>

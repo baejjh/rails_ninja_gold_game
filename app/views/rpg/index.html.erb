@@ -1,29 +1,31 @@
 <h1>Ninja Gold Game</h1>
 
 <div id="score_div">
-	<p>Your Gold: Current Score</p>
+	<p>Your Gold: <%= session[:current_score] %></p>
 </div>
+
+<%= session[:random] %>
 
 <div id="gamble_div">
 	<div class="gamble_option">
 		<h3>Farm</h3>
 		<p>(Earns 10-20 golds)</p>
-		<input type="submit" href="rpg/farm" value="Find Gold!">
+		<a type="button" href="/rpg/farm">Find Gold!</a>
 	</div>
 	<div class="gamble_option">
 		<h3>Cave</h3>
 		<p>(Earns 10-20 golds)</p>
-		<input type="submit" href="rpg/cave" value="Find Gold!">
+		<a type="button" href="/rpg/cave">Find Gold!</a>
 	</div>
 	<div class="gamble_option">
 		<h3>House</h3>
 		<p>(Earns 10-20 golds)</p>
-		<input type="submit" href="rpg/house" value="Find Gold!">
+		<a type="button" href="/rpg/house">Find Gold!</a>
 	</div>
 	<div class="gamble_option">
 		<h3>Casino</h3>
 		<p>(Earns 10-20 golds)</p>
-		<input type="submit" href="rpg/casino" value="Find Gold!">
+		<a type="button" href="/rpg/casino">Find Gold!</a>
 	</div>
 </div>
 

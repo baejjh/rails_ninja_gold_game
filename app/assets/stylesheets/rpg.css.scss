@@ -1,0 +1,44 @@
+// Place all the styles related to the Rpg controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#score_div {
+	display: block;
+	vertical-align:top;
+}
+
+#gamble_div {
+	display: block;
+	width: 100%;
+}
+
+	.gamble_option {
+		display: inline-block;
+		vertical-align: top;
+		width: 20%;
+		margin: 0px auto;
+		text-align:center;
+		outline: 1px solid;
+		padding: 20px;
+	}
+
+#activity_div {
+	display: block;
+}
+
+	.activity_list {
+		outline: 1px solid;
+		width: 80%;
+		height: 150px;
+			overflow:scroll; //scroll when content becomes more than what can fit within the div
+		margin: 0px auto;
+		padding-left: 10px;
+	}
+
+	.winning {
+		color: green;
+	}
+
+	.losing {
+		color: red;
+	}

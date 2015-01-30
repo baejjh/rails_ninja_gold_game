@@ -2,9 +2,8 @@ class RpgController < ApplicationController
 
     def index
         session[:activity_list] ||= []
-        if @gamble_amount.present?
-            session[:current_score] += @gamble_amount;
-        else session[:current_score] = 0
+        if session[:current_score].nil?
+            session[:current_score] = 0
         end
     end
 
